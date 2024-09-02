@@ -16,7 +16,7 @@ const queryAsync = (query, params) => {
     });
   };
 // Rota para a home
-router.get('/account', isAuthenticated, async(req, res) => {
+router.get('/account', async(req, res) => {
     const userId = req.session.user.id;
    
     let viewsQuery=`
@@ -223,7 +223,7 @@ router.post('/update-ad', (req, res) => {
 });
 
 
-router.post('/upload-images', isAuthenticated, upload.array('images', 10), (req, res) => {
+router.post('/upload-images',  upload.array('images', 10), (req, res) => {
     const imagePaths = req.files.map(file => file.path).join(',');
     const userId = req.session.user.id;
 
@@ -257,7 +257,7 @@ router.post('/upload-images', isAuthenticated, upload.array('images', 10), (req,
 
 
 
-router.post('/set-cover-image', isAuthenticated, (req, res) => {
+router.post('/set-cover-image',  (req, res) => {
     const { imageUrl } = req.body;
     const userId = req.session.user.id;
 
@@ -272,7 +272,7 @@ router.post('/set-cover-image', isAuthenticated, (req, res) => {
     });
 });
 
-router.post('/delete-image', isAuthenticated, (req, res) => {
+router.post('/delete-image', (req, res) => {
     const { image } = req.body;
     const userId = req.session.user.id;
 
@@ -306,7 +306,7 @@ router.post('/delete-image', isAuthenticated, (req, res) => {
     });
 });
 
-router.post('/upload-videos', isAuthenticated, upload.array('videos', 10), (req, res) => {
+router.post('/upload-videos',  upload.array('videos', 10), (req, res) => {
     const videoPaths = req.files.map(file => file.path).join(',');
     const userId = req.session.user.id;
 
@@ -338,7 +338,7 @@ router.post('/upload-videos', isAuthenticated, upload.array('videos', 10), (req,
     });
 });
 
-router.post('/delete-video', isAuthenticated, (req, res) => {
+router.post('/delete-video', (req, res) => {
     const { video } = req.body;
     const userId = req.session.user.id;
 
