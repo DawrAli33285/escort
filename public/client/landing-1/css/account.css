@@ -1,0 +1,31 @@
+#work-time-range {
+    background-color: gray !important;
+}
+
+.cover-image {
+    border: 3px solid red; /* Estilo para a imagem de capa */
+    border-radius: 5px;
+    
+}
+
+.image-container > img {
+    cursor: pointer;
+}
+
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.delete-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}

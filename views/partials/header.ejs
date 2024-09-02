@@ -1,0 +1,630 @@
+<header class="app-header position-relative" id="header"> <nav class="navbar container d-flex justify-content-between align-items-center flex-nowrap">
+    <a class="flex-shrink-1 navbar-link" href="/" id="home"><img src="/client/landing-1/images/logo.png" class="navbar-logo" alt="TRANS TRAVESTIS 💎 SHEMALES TS Transexuales Boneca De Programa Garota Traveco Escorts Acompanhantes"></a>
+    <ul class="d-flex justify-content-end align-items-center m-0 position-relative" id="navbar-header-menu">
+    <li class="nav-item ">
+    <a href="/client/landing-1//feed" class="btn ">
+    <i class="fa fa-bolt font-size-26"></i> <span class="d-none d-md-inline ml-10">News
+    </span>
+    </a>
+    </li>
+    <li class="nav-item ">
+    <a href="/client/landing-1//videos" class="btn ">
+    <i class="fab fa-youtube font-size-26"></i> <span class="d-none d-md-inline ml-10">Videos</span>
+    </a>
+    </li>
+    <li class="nav-item ">
+    <a href="/client/landing-1//video-llamadas" class="btn ">
+    <i class="fa fa-camera-home text-xl"></i> <span class="d-none d-md-inline ml-10">VideoCalls</span>
+    </a>
+    </li>
+    <% if (isLoggedIn) { %>
+
+        <li class="nav-item hidden-sm-down">
+            <a href="/account" class="btn btn-primary">
+            <span class="d-none d-md-inline ">My account</span>
+            </a>
+            </li>
+    <% } else { %>
+        <li class="nav-item hidden-sm-down">
+            <a data-trigger="Auth.register" class="btn btn-primary">
+            <span class="d-none d-md-inline ">Advertise</span>
+            </a>
+            </li>
+    <% } %>
+    <li class="nav-item  ">
+    <div class="dropdown position-static">
+    <div class="btn  relative" data-toggle="dropdown" data-auto-close="outside" data-boundary="viewport" data-plugin="favorites" aria-expanded="false" id="favoriteDropdownTrigger">
+    <i class="fa fa-star text-xl no-events"></i>
+    </div>
+    <div class="dropdown-menu dropdown-menu-right dropdown-notification" data-container="body">
+    <h4 class="font-weight-500 p-15 mt-10 mb-0">Favorites</h4>
+    <div class="favorite-container" id="favoriteDropdownContainer"></div>
+    <div class="favorite-empty text-center" style="opacity: 0.4">
+    <i class="fal fa-star-half-alt fa-3x font-weight-400"></i>
+    <div class="text-uppercase font-size-16 font-weight-800 my-20">No Favorites Added</div>
+    </div>
+    </div>
+    </div>
+    </li>
+    <% if (isLoggedIn) { %>
+        <% } else { %>
+    <li class="nav-item bg-transparent position-relative " id="main-menu"> <div class="dropdown d-flex align-items-center justify-content-between navbar-user-menu bg-transparent  position-static">
+    <span class="btn no-hover" data-toggle="dropdown" data-auto-close="outside" data-boundary="viewport"><i class="fa fa-bars text-xl navbar-link"></i></span>
+    <div class="dropdown-multilevel dropdown-menu dropdown-menu-right dropdown-scrollbar dropdown-user" data-container="body">
+    <ul class="dropdown-level dropdown-content">
+    <li>
+    <button type="button" class="dropdown-item" data-trigger="Auth.login" rel="nofollow">
+    <i class="fa fa-sign-in-alt dropdown-icon"></i>
+    Login</button>
+    </li>
+    <li>
+    <button type="button" class="dropdown-item" data-trigger="Auth.register" rel="nofollow">
+    <i class="fa fa-address-card dropdown-icon"></i>
+    Advertise</button>
+    </li>
+    <li>
+    <button type="button" class="dropdown-item" data-trigger="Auth.register" rel="nofollow">
+    <i class="fa fa-user-plus dropdown-icon"></i>
+    Register</button>
+    </li>
+    <li><hr></li>
+    <li>
+    <div class="dropdown-item" data-trigger="Global.loadNews">
+    <i class="fa fa-newspaper dropdown-icon font-weight-400"></i>
+    News</div>
+    </li>
+    
+    <li>
+    <div class="dropdown-item justify-content-between" data-toggle="dropdown">
+    <i class="fa fa-globe-americas dropdown-icon "></i>
+    <div class="flex-grow-1">Region
+    <small class="d-flex align-items-center"><img loading="lazy" src="/client/landing-1/images/NL.svg" class="h-20 mr-5"> Netherlands</small> </div>
+    <i class="fa fa-chevron-right"></i>
+    </div>
+    <div class="dropdown-menu dropdown-level">
+    <ul class="dropdown-content">
+    <li class="dropdown-item dropdown-item-header">
+    <button type="button" class="dropdown-back btn btn-pure p-0"><i class="fa fa-long-arrow-left dropdown-icon"></i></button>
+    <div class="font-size-24 m-0">Switch Region</div></li>
+    <li><a href="/client/landing-1//albania" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/AL.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Albania</a></li>
+    <li><a href="/client/landing-1//andorra" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/AD.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Andorra</a></li>
+    <li><a href="/client/landing-1//argentina" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/AR.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Argentina</a></li>
+    <li><a href="/client/landing-1//armenia" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/AM.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Armenia</a></li>
+    <li><a href="/client/landing-1//aruba" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/AW.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Aruba</a></li>
+    <li><a href="/client/landing-1//australia" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/AU.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Australia</a></li>
+    <li><a href="/client/landing-1//austria" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/AT.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Austria</a></li>
+    <li><a href="/client/landing-1//azerbaijan" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/AZ.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Azerbaijan</a></li>
+    <li><a href="/client/landing-1//bahrain" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/BH.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Bahrain</a></li>
+    <li><a href="/client/landing-1//belgium" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/BE.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Belgium</a></li>
+    <li><a href="/client/landing-1//bolivia" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/BO.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Bolivia</a></li>
+    <li><a href="/client/landing-1//brasil" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/BR.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Brasil</a></li>
+    <li><a href="/client/landing-1//bulgaria" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/BG.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Bulgaria</a></li>
+    <li><a href="/client/landing-1//cambodia" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/KH.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Cambodia</a></li>
+    <li><a href="/client/landing-1//canada" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/CA.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Canada</a></li>
+    <li><a href="/client/landing-1//chile" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/CL.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Chile</a></li>
+    <li><a href="/client/landing-1//china" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/CN.svg" class="object-fit h-60 absolute-center">
+    </div>
+    China</a></li>
+    <li><a href="/client/landing-1//colombia" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/CO.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Colombia</a></li>
+    <li><a href="/client/landing-1//costa-rica" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/CR.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Costa Rica</a></li>
+    <li><a href="/client/landing-1//croatia" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/HR.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Croatia</a></li>
+    <li><a href="/client/landing-1//cuba" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/CU.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Cuba</a></li>
+    <li><a href="/client/landing-1//cyprus" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/CY.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Cyprus</a></li>
+    <li><a href="/client/landing-1//czech-republic" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/CZ.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Czech Republic</a></li>
+    <li><a href="/client/landing-1//denmark" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/DK.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Denmark</a></li>
+    <li><a href="/client/landing-1//ecuador" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/EC.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Ecuador</a></li>
+    <li><a href="/client/landing-1//egypt" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/EG.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Egypt</a></li>
+    <li><a href="/client/landing-1//el-salvador" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/SV.svg" class="object-fit h-60 absolute-center">
+    </div>
+    El Salvador</a></li>
+    <li><a href="/client/landing-1//espana" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/ES.svg" class="object-fit h-60 absolute-center">
+    </div>
+    España</a></li>
+    <li><a href="/client/landing-1//estonia" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/EE.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Estonia</a></li>
+    <li><a href="/client/landing-1//finland" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/FI.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Finland</a></li>
+    <li><a href="/client/landing-1//france" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/FR.svg" class="object-fit h-60 absolute-center">
+    </div>
+    France</a></li>
+    <li><a href="/client/landing-1//georgia" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/GE.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Georgia</a></li>
+    <li><a href="/client/landing-1//germany" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/DE.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Germany</a></li>
+    <li><a href="/client/landing-1//greece" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/GR.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Greece</a></li>
+    <li><a href="/client/landing-1//guatemala" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/GT.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Guatemala</a></li>
+    <li><a href="/client/landing-1//honduras" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/HN.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Honduras</a></li>
+    <li><a href="/client/landing-1//hong-kong" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/HK.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Hong Kong</a></li>
+    <li><a href="/client/landing-1//hungary" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/HU.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Hungary</a></li>
+    <li><a href="/client/landing-1//india" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/IN.svg" class="object-fit h-60 absolute-center">
+    </div>
+    India</a></li>
+    <li><a href="/client/landing-1//indonesia" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/ID.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Indonesia</a></li>
+    <li><a href="/client/landing-1//iraq" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/IQ.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Iraq</a></li>
+    <li><a href="/client/landing-1//ireland" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/IE.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Ireland</a></li>
+    <li><a href="/client/landing-1//israel" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/IL.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Israel</a></li>
+    <li><a href="/client/landing-1//italy" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/IT.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Italy</a></li>
+    <li><a href="/client/landing-1//japan" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/JP.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Japan</a></li>
+    <li><a href="/client/landing-1//jordan" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/JO.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Jordan</a></li>
+    <li><a href="/client/landing-1//kazakhstan" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/KZ.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Kazakhstan</a></li>
+    <li><a href="/client/landing-1//kenya" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/KE.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Kenya</a></li>
+    <li><a href="/client/landing-1//kuwait" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/KW.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Kuwait</a></li>
+    <li><a href="/client/landing-1//laos" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/LA.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Laos</a></li>
+    <li><a href="/client/landing-1//latvia" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/LV.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Latvia</a></li>
+    <li><a href="/client/landing-1//lebanon" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/LB.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Lebanon</a></li>
+    <li><a href="/client/landing-1//lithuania" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/LT.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Lithuania</a></li>
+    <li><a href="/client/landing-1//luxembourg" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/LU.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Luxembourg</a></li>
+    <li><a href="/client/landing-1//malaysia" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/MY.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Malaysia</a></li>
+    <li><a href="/client/landing-1//malta" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/MT.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Malta</a></li>
+    <li><a href="/client/landing-1//mexico" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/MX.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Mexico</a></li>
+    <li><a href="/client/landing-1//montenegro" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/ME.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Montenegro</a></li>
+    <li><a href="/client/landing-1//morocco" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/MA.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Morocco</a></li>
+    <li><a href="/client/landing-1//netherlands" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/NL.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Netherlands</a></li>
+    <li><a href="/client/landing-1//new-zealand" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/NZ.svg" class="object-fit h-60 absolute-center">
+    </div>
+    New Zealand</a></li>
+    <li><a href="/client/landing-1//nicaragua" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/NI.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Nicaragua</a></li>
+    <li><a href="/client/landing-1//norway" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/NO.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Norway</a></li>
+    <li><a href="/client/landing-1//oman" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/OM.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Oman</a></li>
+    <li><a href="/client/landing-1//pakistan" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/PK.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Pakistan</a></li>
+    <li><a href="/client/landing-1//panama" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/PA.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Panama</a></li>
+    <li><a href="/client/landing-1//paraguay" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/PY.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Paraguay</a></li>
+    <li><a href="/client/landing-1//peru" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/PE.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Peru</a></li>
+    <li><a href="/client/landing-1//philippines" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/PH.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Philippines</a></li>
+    <li><a href="/client/landing-1//poland" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/PL.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Poland</a></li>
+    <li><a href="/client/landing-1//portugal" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/PT.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Portugal</a></li>
+    <li><a href="/client/landing-1//puerto-rico" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/PR.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Puerto Rico</a></li>
+    <li><a href="/client/landing-1//qatar" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/QA.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Qatar</a></li>
+    <li><a href="/client/landing-1//republica-dominicana" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/DO.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Republica Dominicana</a></li>
+    <li><a href="/client/landing-1//romania" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/RO.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Romania</a></li>
+    <li><a href="/client/landing-1//russia" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/RU.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Russia</a></li>
+    <li><a href="/client/landing-1//saudi-arabia" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/SA.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Saudi Arabia</a></li>
+    <li><a href="/client/landing-1//serbia" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/RS.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Serbia</a></li>
+    <li><a href="/client/landing-1//singapore" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/SG.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Singapore</a></li>
+    <li><a href="/client/landing-1//siria" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/SY.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Siria</a></li>
+    <li><a href="/client/landing-1//slovakia" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/SK.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Slovakia</a></li>
+    <li><a href="/client/landing-1//slovenia" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/SI.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Slovenia</a></li>
+    <li><a href="/client/landing-1//south-africa" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/ZA.svg" class="object-fit h-60 absolute-center">
+    </div>
+    South Africa</a></li>
+    <li><a href="/client/landing-1//south-korea" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/KR.svg" class="object-fit h-60 absolute-center">
+    </div>
+    South Korea</a></li>
+    <li><a href="/client/landing-1//sri-lanka" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/LK.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Sri Lanka</a></li>
+    <li><a href="/client/landing-1//sweden" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/SE.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Sweden</a></li>
+    <li><a href="/client/landing-1//switzerland" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/CH.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Switzerland</a></li>
+    <li><a href="/client/landing-1//taiwan" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/TW.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Taiwán</a></li>
+    <li><a href="/client/landing-1//thailand" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/TH.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Thailand</a></li>
+    <li><a href="/client/landing-1//tunisia" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/TN.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Tunisia</a></li>
+    <li><a href="/client/landing-1//turkey" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/TR.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Turkey</a></li>
+    <li><a href="/client/landing-1//uk" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/GB.svg" class="object-fit h-60 absolute-center">
+    </div>
+    UK</a></li>
+    <li><a href="/client/landing-1//ukraine" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/UA.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Ukraine</a></li>
+    <li><a href="/client/landing-1//united-arab-emirates" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/AE.svg" class="object-fit h-60 absolute-center">
+    </div>
+    United Arab Emirates</a></li>
+    <li><a href="/client/landing-1//usa" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/US.svg" class="object-fit h-60 absolute-center">
+    </div>
+    United States</a></li>
+    <li><a href="/client/landing-1//uruguay" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/UY.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Uruguay</a></li>
+    <li><a href="/client/landing-1//uzbekistan" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/UZ.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Uzbekistan</a></li>
+    <li><a href="/client/landing-1//venezuela" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/VE.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Venezuela</a></li>
+    <li><a href="/client/landing-1//viet-nam" class="dropdown-item">
+    <div class="avatar avatar-xs mr-10">
+    <img loading="lazy" src="/client/landing-1/images/VN.svg" class="object-fit h-60 absolute-center">
+    </div>
+    Việt Nam</a></li>
+    </ul>
+    </div>
+    </li>
+    <li>
+    <div class="dropdown-item justify-content-between" data-toggle="dropdown">
+    <i class="fa fa-language dropdown-icon"></i>
+    <div class="flex-grow-1">Language
+    <small class="d-flex align-items-center">EN</small>
+    </div>
+    <i class="fa fa-chevron-right"></i>
+    </div>
+    <div class="dropdown-menu dropdown-level">
+    <ul class="dropdown-content">
+    <li class="dropdown-item dropdown-item-header">
+    <button type="button" class="dropdown-back btn btn-pure p-0"><i class="fa fa-long-arrow-left dropdown-icon"></i></button>
+    <div class="font-size-24 m-0">Switch Language</div></li>
+    <li><a class="dropdown-item" rel="nofollow" role="locale" data-lang="es"><i class="dropdown-icon fa fa-language"></i> Español</a></li>
+    <li><a class="dropdown-item" rel="nofollow" role="locale" data-lang="en"><i class="dropdown-icon fa fa-language"></i> English</a></li>
+    <li><a class="dropdown-item" rel="nofollow" role="locale" data-lang="pt"><i class="dropdown-icon fa fa-language"></i> Portuguese</a></li>
+    <li><a class="dropdown-item" rel="nofollow" role="locale" data-lang="it"><i class="dropdown-icon fa fa-language"></i> Italian</a></li>
+    <li><a class="dropdown-item" rel="nofollow" role="locale" data-lang="fr"><i class="dropdown-icon fa fa-language"></i> French</a></li>
+    <li><a class="dropdown-item" rel="nofollow" role="locale" data-lang="de"><i class="dropdown-icon fa fa-language"></i> German</a></li>
+    <li><a class="dropdown-item" rel="nofollow" role="locale" data-lang="el"><i class="dropdown-icon fa fa-language"></i> Greek</a></li>
+    <li><a class="dropdown-item" rel="nofollow" role="locale" data-lang="ru"><i class="dropdown-icon fa fa-language"></i> Russian</a></li>
+    <li><a class="dropdown-item" rel="nofollow" role="locale" data-lang="tr"><i class="dropdown-icon fa fa-language"></i> Turkish</a></li>
+    </ul>
+    </div>
+    </li>
+    <li id="dark-mode-menu" class="my-5">
+    <select class="segment-select" data-plugin="segment" value="auto" id="themeSelector">
+    <option value="auto" data-html="<i class='fa fa-circle-half-stroke mr-10'></i> Auto">Auto</option>
+    <option value="light" data-html="<i class='fa fa-sun-bright mr-10'></i> Light">Light</option>
+    <option value="dark" data-html="<i class='fa fa-moon mr-10'></i> Dark">Dark</option>
+    </select>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </li>
+    <% } %>
+    </ul>
+    </nav>
+    </header>
+
+
+
+  

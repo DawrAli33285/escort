@@ -1,0 +1,78 @@
+.account-container {
+    display: flex; /* Define Flexbox para o container */
+    align-items: flex-start; /* Alinha os itens no topo */
+    width: 100%; /* Largura completa */
+}
+
+.account-menu {
+    width: 250px; /* Largura fixa para o menu lateral */
+    padding: 10px;
+    background-color: #212121; /* Cor de fundo para o menu */
+    border-radius: 5px; /* Borda arredondada */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra leve */
+    margin-right: 20px; /* Espaço entre o menu e o conteúdo */
+}
+
+.account-content {
+    flex-grow: 1; /* O conteúdo principal ocupa o resto do espaço */
+    padding: 10px;
+    width: 50%; /* Define a largura do tab-content como 50% */
+    background-color: #fff; /* Cor de fundo para o conteúdo */
+    border-radius: 5px; /* Borda arredondada */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra leve */
+    margin-left: auto; /* Alinha o conteúdo à direita */
+}
+
+.tab-pane {
+    display: block; /* Garante que o tab-pane ocupe o espaço adequado */
+}
+
+.account-menu ul.nav-tabs {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Remove a formatação de lista */
+}
+
+.account-menu .nav-item {
+    margin-bottom: 10px;
+    text-align: left; /* Texto alinhado à esquerda */
+}
+
+.account-menu .nav-link {
+    display: flex;
+    flex-direction: row; /* Ícone e texto lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 10px;
+    border: 1px solid #ddd; /* Borda ao redor do link */
+    border-radius: 5px; /* Borda arredondada */
+    background-color: #ffffff; /* Cor de fundo branca */
+    color: #333; /* Cor do texto */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.account-menu .nav-link.active {
+    background-color: #007bff; /* Cor de fundo para o item ativo */
+    color: #fff; /* Cor do texto para o item ativo */
+}
+
+.account-menu .nav-link:hover {
+    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+}
+
+.account-menu .nav-icon {
+    font-size: 20px; /* Tamanho do ícone */
+    margin-right: 10px; /* Espaço entre ícone e texto */
+}
+
+.account-menu-container {
+    display: flex;
+    width: 100%;
+    position: relative;
+    clip-path: polygon(0 0, 200% 0, 200% 100%, 0 100%);
+}
+
+.account-menu-content {
+    width: 80%;
+}
