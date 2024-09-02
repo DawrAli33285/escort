@@ -11,8 +11,6 @@ const checkLogin = require('./controllers/checklogin'); // Certifique-se de apon
 
 // Carregar as variáveis de ambiente
 dotenv.config();
-app.use('/favicon.ico', express.static(path.join(__dirname, 'public', 'favicon.ico')));
-
 
 // Configurações
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -23,7 +21,6 @@ app.use(session({
   saveUninitialized: true
 }));
 app.use(checkLogin);
-
 
 app.use(express.static('public'));
 // Serve arquivos estáticos da pasta 'uploads'
