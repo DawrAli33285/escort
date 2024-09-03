@@ -231,7 +231,7 @@
     </div>
     </div>
     <div class="pub-menu">
-    <button type="button" data-trigger="Whatsapp.send" data-whatsapp-text="Hi Talitta, I saw you at Distintas.net, how are you? I wanted to consult you ..." data-whatsapp-phone="<%= adData.whatsapp %>" class="btn btn-primary pub-menu-button" data-stats_event="click_btn_whatsapp" data-stats_value="223455" data-track="click" data-toggle="tooltip" data-placement="top" title="Whatsapp"><i class="fab fa-whatsapp font-size-20"></i></button>
+    <button id="wpbtn" type="button" data-trigger="Whatsapp.send" data-whatsapp-text="Hi Talitta, I saw you at Distintas.net, how are you? I wanted to consult you ..." data-whatsapp-phone="<%= adData.whatsapp %>" class="btn btn-primary pub-menu-button" data-stats_event="click_btn_whatsapp" data-stats_value="223455" data-track="click" data-toggle="tooltip" data-placement="top" title="Whatsapp"><i class="fab fa-whatsapp font-size-20"></i></button>
     <a  class="btn callbtn btn-primary pub-menu-button" data-stats_event="click_btn_call" data-stats_value="223455" data-track="click" data-toggle="tooltip" rel="noopener noreferrer nofollow" data-placement="top" title="Call"><i class="fa fa-phone-alt"></i></a>
     </div> <div class="pub-gallery" id="pub-gallery">
     <div>
@@ -1313,6 +1313,44 @@
                 window.NOW = NOW;
                 window.Cache = Cache;
                 let callbtn=document.querySelector('.callbtn')
+let wpbtn=document.querySelector('#wpbtn')
+wpbtn.addEventListener('click',function(e){
+    e.preventDefault();
+    let userLocal=localStorage.getItem('user')
+    let modalidtwo=document.querySelector('#modal-id')
+
+    let advertiseridtwo=modalidtwo.getAttribute('data-modal-id')
+   
+    const viewsdata = {
+        email: JSON.parse(userLocal).meta.email, 
+        advertiserid: advertiseridtwo,
+        reason: 'contact' 
+    };
+   
+    fetch('/add-viewcontact', {
+    method: 'POST', // HTTP method
+    headers: {
+        'Content-Type': 'application/json' // Content type to indicate JSON data
+    },
+    body: JSON.stringify(viewsdata) // Convert the data object to a JSON string
+})
+.then(response => {
+    if (!response.ok) {
+        return response.json().then(errorData => {
+            throw new Error(errorData.error || 'Something went wrong');
+        });
+    }
+    return response.json(); // Parse the JSON response
+})
+.then(result => {
+    // Handle the successful response
+    console.log('View/Contact added successfully:', result);
+})
+.catch(error => {
+    // Handle any errors
+  
+});
+})
 
 callbtn.addEventListener('click',async function(e){
     e.preventDefault();
